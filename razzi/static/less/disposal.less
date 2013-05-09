@@ -1,0 +1,81 @@
+@import "bootstrap.less";
+@import "responsive.less";
+
+@nice-blue: #3300ad;
+@light-blue: @nice-blue+#111;
+@lighter-blue: @nice-blue+#333;
+@black: black;
+@white: white;
+@gray: gray;
+@light-gray: @gray+#555;
+@blue: blue;
+@nice-blue: @blue+#555;
+
+body{
+	background-color: @light-gray;
+	font-family: "Helvetica";
+	font-size: 16px;
+	:hover {
+		text-decoration: none;
+	}
+}
+.main{
+	padding-left: 30px;
+	margin-bottom: 10px;
+	h1{
+		font-size: 50px;
+	}
+}
+.number{
+	background-color: @gray;
+	border-radius: 10px;
+}
+.actions{
+	color:#FFFFFF;
+	background-color: black;
+	font-size: 20px;
+	a{
+		color: @light-gray;
+	}
+	.brand{
+		color: @nice-blue;
+	}
+	ul{
+		padding: 15px 0px;
+	}
+	li{
+		padding: 8px;
+		margin: 10px;
+		display:inline;
+		&:hover{
+			color: @gray+#666;
+		}
+	}
+}
+.opaque{
+	background-color: @white;
+	border-radius: 10px;
+}
+.thumbnail{
+	background-color: @white;
+	color: @black;
+	:hover{
+		color: black;
+	}
+}
+.navbar-search{
+	margin: 0px 20px 0px 0px;
+	margin-top: -5px;
+}
+.leftMost {
+	padding-right: 60px;
+}
+.disposal{
+	margin-bottom: 10px;
+}
+.centered{
+	text-align: center;
+}
+.hero{
+	padding-top: 30px;
+}

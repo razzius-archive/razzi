@@ -1,0 +1,5 @@
+__pycache__
+zrcle/static
+venv
+*.pyc
+*~
