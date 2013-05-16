@@ -8,17 +8,25 @@
 body{
 	background: #ddd;
 }
+.top-row {
+	position: relative;
+}
 .right{
 	text-align: right;
 }
 .sheet{
 	display: none;
-	font-family: serif;
+	font-family: sans-serif;
 	background: #fff;
 	width: 75%;
 	padding: 50px;
 	margin: 0px auto;
 	box-shadow: 0px 15px 25px #888;
+}
+.email {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 .heading{
 	font-weight: bold;
@@ -27,10 +35,11 @@ body{
 {% endblock %}
 
 {% block content %}
+<div id="loading" class="centered">Loading...</div>
 <div id="resume" class="sheet">
-	<div class="row-fluid">
-		<h3 class="span6">Razzi N. Abuissa</h3>
-		<h3 class="span6 right">March 17, 2013</h3>
+	<div class="row-fluid top-row">
+		<h2 class="span6">Razzi N. Abuissa</h2>
+		<h4 class="span6 right email"><a href="mailto:razzi53@gmail.com">razzi53@gmail.com</a></h4>
 	</div>
 	<hr>
 	<div class="row-fluid">
@@ -43,10 +52,10 @@ body{
 	</div>
 	<h3 class="heading">Education</h3>
 	<div class="row-fluid">
-		<div class="span7 offset1">
+		<div class="span8 offset1">
 			<span class="heading">University of Pennsylvania</span>, Philadelphia, PA
 		</div>
-		<div class="span4 right">Graduating May 2015</div>
+		<div class="span3 right">Expected May 2015</div>
 	</div>
 	<div class="row-fluid">
 		<div class="span11 offset1">
@@ -55,22 +64,27 @@ body{
 	</div>
 	<div class="row-fluid">
 		<div class="offset1">
-			Cumulative GPA: 3.89 / 4
+			Cumulative GPA: 3.84 / 4
+		</div>
+	</div>	<div class="row-fluid">
+		<div class="offset1">
+			Dean's list (Fall 2011 - Spring 2012)
 		</div>
 	</div>
 	<br>
 	<div class="row-fluid">
-		<div class="span11 offset1">
-			<span class="heading">Udacity</span>, online university at <a href="http://www.udacity.com">www.udacity.com</a>
-		</div>
-	</div>
-	<div class="row-fluid">
 		<div class="span8 offset1">
-			Completed CS101&mdash;Building a Search Engine. Enrolled in Web Development and HTML5 Game Development.
+			<span class="heading">Udacity</span>, online university at <a href="http://www.udacity.com">www.udacity.com</a>
 		</div>
 		<div class="span3 right">
 			2012-Present
 		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span11 offset1">
+			Completed CS101&mdash;Building a Search Engine. Enrolled in Web Development and Software Testing.
+		</div>
+
 	</div>
 	<br>
 <!-- 	<div class="row-fluid">
@@ -94,7 +108,7 @@ body{
 		<div class="span4 right">Graduated May 2011</div>
 	</div>
 	<div class="row-fluid">
-		<div class="span11 offset1">Valedictorian</div>
+		<div class="span11 offset1">Valedictorian, Iowa Governor's Scholar</div>
 	</div>
 	<br>
 	<h3 class="heading">Work Experience</h3>
@@ -108,8 +122,9 @@ body{
 	</div>
 	<div class="row-fluid">
 		<ul class="offset2">
-			<li>Developed <a href="http://app.penncycle.org">penncycle.org</a>, Penn's bike-sharing service</li>
-			<li>PennCycle is hosted on Heroku and uses Django</li>
+			<li>Developed <a href="http://app.penncycle.org">penncycle.org</a> for the distribution and management of Penn's on-campus 26-bike fleet</li>
+			<li>Implemented phone-based checkout system to facilitate rental process</li>
+			<li>Awarded <a href="http://www.tech-house.upenn.edu/">Weiss Tech House</a> innovation fund grant to integrate GPS into fleet</li>
 		</ul>
 	</div>
 	<div class="row-fluid">
@@ -123,7 +138,8 @@ body{
 	<div class="row-fluid">
 		<ul class="offset2">
 			<li>Performed research in computational chemistry under <a href="http://www.sas.upenn.edu/~subotnik/Site/Home_Page.html">Joseph Subotnik</a></li>
-			<li>Analyzed data using MATLAB and Python</li>
+			<li>Analyzed Q-Chem molecular structure data using MATLAB and Excel</li>
+			<li>Automated job submission and data collection using Python</li>
 		</ul>
 	</div>
 	<div class="row-fluid">
@@ -131,30 +147,23 @@ body{
 			<span class="heading">The Daily Pennsylvanian</span>&mdash;Online Graphics
 		</div>
 		<div class="span4 right">
-			January 2012&mdash;Present
+			January 2012&mdash;February 2013
 		</div>
 		<div class="row-fluid">
 			<ul class="offset2">
-				<li>Created interactive media for the <a href="http://www.thedp.com/staff/razzi_abuissa">website</a> of Penn's student newspaper</li>
-				<li>Currently leading the transition from Flash to HTML5</li>
+				<li>Created 18 interactive media graphics for the <a href="http://www.thedp.com/staff/razzi_abuissa">website</a> of Penn's student newspaper</li>
+				<li>Consulted for the transition from Flash graphics to HTML5</li>
 			</ul>
 		</div>
 	</div>
 	<h4 class="heading">Skills</h4>
 	<div class="row-fluid">
 		<ul class="offset2">
-			<li>Programming: Python, Javascript, C, MATLAB, Shell</li>
-			<li>Front End Web: HTML, CSS, jQuery, LESS CSS, Flash</li>
+			<li>Programming: Python, Javascript, C, Java, OCaml, MATLAB, Shell</li>
+			<li>Front End Web: HTML, CSS, jQuery, LESS CSS</li>
 			<li>Back End Web: Django, SQL, South, Flask</li>
 			<li>Software: Sublime Text, git, Adobe Creative Suite</li>
 			<li>Language: Fluent in English, Spanish; conversational in French, Arabic</li>
-		</ul>
-	</div>
-	<h4 class="heading">Awards</h4>
-	<div class="row-fluid">
-		<ul class="offset2">
-			<li>University of Pennsylvania Dean's List (2012)</li>
-			<li>Iowa Governor's Scholar (2011)</li>
 		</ul>
 	</div>
 	<h4 class="heading">Activities</h4>
@@ -170,7 +179,8 @@ body{
 {% block scripts %}
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#resume").slideDown("slow");
+		$("#loading").remove();
+		$("#resume").slideDown("fast");
 	});
 </script>
 {% endblock %}
