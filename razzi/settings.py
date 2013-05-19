@@ -120,6 +120,7 @@ WSGI_APPLICATION = 'razzi.wsgi.application'
 
 TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), 'templates'),
+    os.path.join(os.path.dirname(__file__), 'posts'),
 )
 
 INSTALLED_APPS = (
