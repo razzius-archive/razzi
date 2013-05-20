@@ -1,7 +1,7 @@
 from django.conf.urls import patterns
 from django.conf import settings
 
-from razzi.views import home, ResumeView, Blog, Projects
+from razzi.views import Home, Resume, Blog, Projects
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -9,8 +9,8 @@ from razzi.views import home, ResumeView, Blog, Projects
 
 urlpatterns = patterns(
     '',
-    (r"^$", home),
-    (r"^resume/$", ResumeView.as_view()),
+    (r"^$", Home.as_view()),
+    (r"^resume/$", Resume.as_view()),
     (r"^blog/$", Blog.as_view()),
     (r"^blog/(.*)/$", Blog.as_view()),
     (r"^projects/$", Projects.as_view()),

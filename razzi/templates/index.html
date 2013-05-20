@@ -2,15 +2,11 @@
 {% block content %}
 <article>
     <header>
-        <h1>Latest from the blog:</h1>
-        <p>After stumbling upon a member of the Heroku team who happens to be based in Iowa City, <a href="http://geemus.com">Wesley Beary</a>, I followed a few links and wound up on the Meetup page for Iowa JS. Their monthly meeting for May fortuitously overlapped with my time at home!</p>
-        <p>Apparently rule #8 there is that if it's your first time at Iowa JS, you have to give a lightening talk (I've heard no mention of other numbered rules), so I put together a few slides using <a href="http://slid.es">reveal.js</a>. As I'm a student, the natural topic was online learning.</p>
-        <iframe id="presentation" src="http://slid.es/razzi/online-learning/embed" width="100%" height="440px" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        <p>The other talks were about node and load balancing, browserify.js, and TypeScript, which I found particularly interesting. TypeScript isn't as appealing as CoffeeScript (mostly because I'm a python fan) but I'm curious to see its adoption.</p>
+        {% include 'iowa_js.html' %}
     </header>
     <section>
-        <h2>Projects</h2>
-        <p>Prototypes and ideas for web projects can be found here. Care to collaborate? Email me at <a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#97;&#122;&#122;&#105;&#53;&#51;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;'>&#114;&#97;&#122;&#122;&#105;&#53;&#51;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>.</p>
+        <h2><a href="/projects">Projects</a></h2>
+        <p>Prototypes and ideas for web projects can be found <a href="/projects">here</a>. Care to collaborate? Email me at <a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#97;&#122;&#122;&#105;&#53;&#51;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;'>&#114;&#97;&#122;&#122;&#105;&#53;&#51;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>.</p>
     </section>
     <section>
         <h2>This site</h2>
