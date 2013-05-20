@@ -33,6 +33,7 @@ iframe {
     bottom: 0px;
     right: 40px;
 }
+
 </style>
 {% endblock %}
 
@@ -40,9 +41,8 @@ iframe {
 <div class="row-fluid penncycle">
     <div class="span9">
         <div class="row-fluid switcher">
-            <div class="span5 offset3"><a class="domain" href="http://app.penncycle.org">penncycle.org</a></div>
-            <div class="span3 btn next">Recycling Game &#187;</div>
-            <div class="span1">&nbsp;</div>
+            <div class="span6 offset3"><a class="domain" href="http://app.penncycle.org">PennCycle</a></div>
+            <div class="span3 btn next" id="popcorn">Next: Popcorn Portal &#187;</div>
         </div>        
         <br>
         <iframe src="http://app.penncycle.org" frameborder="0" style="width:125%" height="550px"></iframe>
@@ -66,21 +66,97 @@ iframe {
         </div>
     </div>
 </div>
-<div class="row-fluid">
-    
 
+<div class="row-fluid popcorn" style="display: none">
+    <div class="span9">
+        <div class="row-fluid switcher">
+            <div class="span3 btn previous" id="pc">&laquo; Previous: PennCycle</div>
+            <div class="span5 offset1"><a class="domain" href="http://app.penncycle.org">Popcorn Portal</a></div>
+            <div class="span3 btn next" id="recycle">Next: Recycling Game &raquo;</div>
+        </div>        
+        <br>
+        <a href="http://app.penncycle.org"><img src="/static/img/popcorn.png" alt="" width="100%" href="http://popcorn-portal.com"></a>
+    </div>
+    <div class="span3 aside">
+        <div>
+            <p>Developed at PennApps Fall 2012 with <a href="http://alexrattray.com">Alex Rattray</a>.</p>
+            <p>Click on popcorn to select tags, then hit 'show trailers' to find matches.</p>
+            <p>It's a bit buggy, and I hope to fix the project layout to make it more maintainable. It's too bad that Google App Engine, which currently hosts the site, has such inflexible imports, making the current project messy (did I mention it was made at a hackathon? :).</p>
+            <p>I'll probably migrate a version to Heroku.</p>
+        </div>
+    </div>
+</div>
 
+<div class="row-fluid recycling" style="display: none">
+    <div class="span9">
+        <div class="row-fluid switcher">
+            <div class="span3 btn previous" id="portal">&laquo; Previous: Popcorn Portal</div>
+            <div class="span5 offset1"><a class="domain" href="http://upennrecycle.appspot.com">Recycling Game</a></div>
+            <div class="span3 btn next" id="ideas">Next: Ideas &raquo;</div>
+        </div>        
+        <br>
+        <embed src="/static/swf/Recycling31.swf" width="600px" height="420px">
+    </div>
+    <div class="span3 aside">
+        <div>
+            <p>An introduction to what can and can't be recycled on Penn's campus. Made for the Penn Environmental Group.</p>
+            <img src="/static/img/hisss.png" alt="Flash in 2013?" href="http://xkcd.com/1179/">
+            <p>I hope to make an html5 version at some point.</p>
+            <p>Visit the standalone website <a href="http://upennrecycle.appspot.com">here</a>.</p>
+            <br>
+            <p>The game was played by over 400 students during Move In Green 2012.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row-fluid ideas" style="display: none">
+    <div class="row-fluid switcher">
+        <div class="span3 btn previous" id="recycling">&laquo; Previous: Recycling at Penn</div>
+        <div class="span8 offset1"><h1>Ideas</h1></div>
+    </div>        
+    <br>
+    <div>
+        <h2>Recyclepedia</h2>
+        <p>Recyclepedia would be a Penn-specific web resource for determining how to properly dispose of anything. The main functionality would be an index for looking up items, a map of recycling bins / ewaste / compost locations, a FAQ about recycling on campus.</p>
+        <h2>Recursive Learning</h2>
+        <p>Have you ever done a tutorial that either skipped setup information that you needed as a beginner? How about one where they spent too much time on things like project setup, when you wanted to jump right into the implementation?</p>
+        <p>The idea of Recursive Learning would be to allow beginners to expand any instruction, and experienced users to collapse them. An experienced user doing a Node tutorial, for example, could hide all of the Node installation steps, and a beginner to iOS development could expand a section like "Create a project using the XCode template" to any amount of detail--instructions like "Installing XCode" and "Using XCode project templates" would first appear, with those expandable, recursing to single actions like clicking on dialog boxes.</p>
+        <h2>Campus Dash</h2>
+        <p>This simple application would organize online resources of a university, such as their BlackBoard site, their course registration website, and student news on a dashboard that would emphasize usability. Many colleges could have their own subdomain. The goal would be to have students set this dashboard as their homepage and get traffic whenever they open their browser.</p>
+        <br>
+        <p>Any of this sound interesting? Check out my <a href="http://github.com/razzius">Github</a> to check the status of projects like these, and email me at <a href="mailto:razzi53@gmail.com">razzi53@gmail.com</a> if you'd like to collaborate, or if you'd like to share your own ideas.</p>
+    </div>
 </div>
 {% endblock %}
 
-
-
-        Projects:
-        -Penncycle
-        -Popcorn portal
-        -Recycling game
-
-        Ideas:
-        -Recyclepedia
-        -Recursive learning
-        -Campus express
+{% block scripts %}
+<script type="text/javascript">
+    // Pagination-esque
+    $(function() {
+        $("#popcorn").click(function() {
+            $(".penncycle").hide();
+            $(".popcorn").show();
+        });
+        $("#pc").click(function() {
+            $(".popcorn").hide();
+            $(".penncycle").show();
+        });
+        $("#recycle").click(function() {
+            $(".popcorn").hide();
+            $(".recycling").show();
+        });
+        $("#portal").click(function() {
+            $(".recycling").hide();
+            $(".popcorn").show();
+        });
+        $("#ideas").click(function() {
+            $(".recycling").hide();
+            $(".ideas").show();
+        })
+        $("#recycling").click(function() {
+            $(".ideas").hide();
+            $(".recycling").show();
+        })
+    });
+</script>
+{% endblock %}
