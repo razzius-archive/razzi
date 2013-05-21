@@ -15,7 +15,7 @@ body{
 	text-align: right;
 }
 .sheet{
-	display: none;
+	/*display: none;*/
 	font-family: sans-serif;
 	background: #fff;
 	width: 75%;
@@ -31,11 +31,17 @@ body{
 .heading{
 	font-weight: bold;
 }
+a {
+	color: #333333;
+}
+a:hover {
+	color: #333333;
+}
 </style>
 {% endblock %}
 
 {% block content %}
-<div id="loading" class="centered">Loading...</div>
+<!-- <div id="loading" class="centered">Loading...</div> -->
 <div id="resume" class="sheet">
 	<div class="row-fluid top-row">
 		<h2 class="span6">Razzi N. Abuissa</h2>
@@ -43,7 +49,7 @@ body{
 	</div>
 	<hr>
 	<div class="row-fluid">
-		<div class="span8 offset1"><em>School:</em> 3820 Locust Walk MB 360, Philadelphia, PA 19104</div>
+		<div class="span8 offset1"><em>School:</em> 120 South 41st Street, Philadelphia, PA 19104</div>
 		<div class="span3 right">319-594-3124</div>
 	</div>
 	<div class="row-fluid">
@@ -52,15 +58,15 @@ body{
 	</div>
 	<h3 class="heading">Education</h3>
 	<div class="row-fluid">
-		<div class="span8 offset1">
+		<div class="span11 offset1">
 			<span class="heading">University of Pennsylvania</span>, Philadelphia, PA
 		</div>
-		<div class="span3 right">Expected May 2015</div>
 	</div>
 	<div class="row-fluid">
-		<div class="span11 offset1">
-			Candidate for Bachelor of Arts in Chemistry
+		<div class="span8 offset1">
+			Candidate for Bachelor of Science
 		</div>
+		<div class="span3 right">Expected May 2015</div>
 	</div>
 	<div class="row-fluid">
 		<div class="offset1">
@@ -102,13 +108,13 @@ body{
 	It took up too much space, but I'm glad you're seeing it here!
 -->
 	<div class="row-fluid">
-		<div class="span7 offset1">
+		<div class="span11 offset1">
 			<span class="heading">Iowa City High School</span>, Iowa City, IA
 		</div>
-		<div class="span4 right">Graduated May 2011</div>
 	</div>
 	<div class="row-fluid">
-		<div class="span11 offset1">Valedictorian, Iowa Governor's Scholar</div>
+		<div class="span7 offset1">Valedictorian, Iowa Governor's Scholar</div>
+		<div class="span4 right">Graduated May 2011</div>
 	</div>
 	<br>
 	<h3 class="heading">Work Experience</h3>
@@ -170,7 +176,7 @@ body{
 	<div class="row-fluid">
 		<ul class="offset2">
 			<li>Penn Environmental Group: Energy Committee Chair Fall 2012-Spring 2013</li>
-			<li>Swing dancing and Ultimate Frisbee clubs</li>
+			<li>Swing dancing: Choreographed and instructed dance to 8 members of Penn's swing dance troupe for our showcase</li>
 		</ul>
 	</div>
 </div>
@@ -178,9 +184,9 @@ body{
 
 {% block scripts %}
 <script type="text/javascript">
-	$(function(){
-		$("#loading").remove();
-		$("#resume").slideDown("fast");
-	});
+	// $(function(){
+	// 	$("#loading").remove();
+	// 	$("#resume").slideDown("fast");
+	// });
 </script>
 {% endblock %}
